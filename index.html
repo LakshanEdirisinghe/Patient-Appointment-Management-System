@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MediCare - Single Page App</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" onclick="showSection('home')">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+          class="bi bi-activity text-primary me-2" viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2" />
+        </svg>
+        MediCare
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3">
+          <li class="nav-item"><a class="nav-link active" onclick="showSection('home')">Home</a></li>
+          <li class="nav-item"><a class="nav-link" onclick="showSection('about')">About</a></li>
+          <li class="nav-item"><a class="nav-link" onclick="showSection('services')">Services</a></li>
+        </ul>
+        <div class="d-flex ms-lg-3 mt-2 mt-lg-0">
+          <a href="#" class="btn btn-outline-primary me-2">Login</a>
+          <a href="#" class="btn btn-primary">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HOME -->
+  <section id="home" class="active">
+    <h1>Home</h1>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h1>About</h1>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <h1>Services</h1>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 MediCare - All Rights Reserved</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    function showSection(sectionId) {
+      // hide all sections
+      document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+      // show clicked one
+      document.getElementById(sectionId).classList.add('active');
+
+      // update nav active
+      document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+      const activeLink = Array.from(document.querySelectorAll('.nav-link'))
+        .find(link => link.textContent.trim().toLowerCase() === sectionId);
+      if (activeLink) activeLink.classList.add('active');
+
+      // collapse navbar on mobile
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+      if (navbarCollapse.classList.contains('show')) {
+        new bootstrap.Collapse(navbarCollapse).toggle();
+      }
+    }
+  </script>
+</body>
+
+</html>
