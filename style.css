@@ -24,6 +24,10 @@
 }
 
 /* Page sections */
+/* .title{
+    margin-left: 10px;
+    margin-right: 12px;
+} */
 section {
     display: none;
     /* padding-top: 120px; */
