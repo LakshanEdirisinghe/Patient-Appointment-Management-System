@@ -55,7 +55,7 @@
     </nav>
 
     <!-- HOME -->
-    <section id="home" class="active">
+    <section id="home" class="active pt-0">
         <div class="position-relative">
             <!-- Background Image -->
             <img src="src/img/husien-bisky-ZuIucrhwHvA-unsplash.jpg" class="img-fluid w-100"
@@ -152,84 +152,176 @@
 
 
 
-    <!-- Patient Registration -->
     <section id="patReg">
-        <h1>About</h1>
-        <div class="container">
-            <p class="bg-info">What is Lorem Ipsum?
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
-                Why do we use it?
-                It is a long established fact that a reader will be distracted by the readable content of a page
-                when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
-                distribution of letters, as opposed to using 'Content here, content here', making it look like
-                readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their
-                default model text, and a search for 'lorem ipsum' will uncover many web sites still in their
-                infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose
-                (injected humour and the like).
-
-
-                Where does it come from?
-                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin
-                professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words,
-                consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical
-                literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33
-                of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This
-                book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of
-                Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-
-                The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
-                Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in
-                their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-            </p>
-            <p class="bg-secondary">
-                What is Lorem Ipsum?
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
-                Why do we use it?
-                It is a long established fact that a reader will be distracted by the readable content of a page
-                when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
-                distribution of letters, as opposed to using 'Content here, content here', making it look like
-                readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their
-                default model text, and a search for 'lorem ipsum' will uncover many web sites still in their
-                infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose
-                (injected humour and the like).
-
-
-                Where does it come from?
-                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin
-                professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words,
-                consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical
-                literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33
-                of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This
-                book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of
-                Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-
-                The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
-                Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in
-                their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-
-
-            </p>
-
+        <div class="container py-5">
+            <h2 class="fw-bold text-primary mb-4">🧍‍♂️ Patient Registration</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <form class="border rounded-3 p-4 shadow-sm bg-light">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" class="form-control" placeholder="Enter patient name">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Date of Birth</label>
+                                <input type="date" class="form-control">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" placeholder="example@mail.com">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Contact Number</label>
+                                <input type="text" class="form-control" placeholder="07XXXXXXXX">
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Address</label>
+                                <textarea class="form-control" rows="2" placeholder="Enter address"></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-3">Register Patient</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- SERVICES -->
-    <section id="services">
-        <h1>Services</h1>
+    <!-- DOCTOR REGISTRATION -->
+    <section id="docReg">
+        <div class="container py-5">
+            <h2 class="fw-bold text-success mb-4">👨‍⚕️ Doctor Registration</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <form class="border rounded-3 p-4 shadow-sm bg-light">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Doctor Name</label>
+                                <input type="text" class="form-control" placeholder="Enter full name">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Specialization</label>
+                                <input type="text" class="form-control" placeholder="Eg: Cardiologist">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" placeholder="example@mail.com">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Contact Number</label>
+                                <input type="text" class="form-control" placeholder="07XXXXXXXX">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-success mt-3">Register Doctor</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOK APPOINTMENT -->
+    <section id="bookApp">
+        <div class="container py-5">
+            <h2 class="fw-bold text-info mb-4">📅 Book an Appointment</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <form class="border rounded-3 p-4 shadow-sm bg-light">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Patient Name</label>
+                                <input type="text" class="form-control" placeholder="Enter patient name">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Select Doctor</label>
+                                <select class="form-select">
+                                    <option>Select Doctor</option>
+                                    <option>Dr. Fernando (Cardiology)</option>
+                                    <option>Dr. Perera (Dermatology)</option>
+                                    <option>Dr. Silva (Pediatrics)</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Appointment Date</label>
+                                <input type="date" class="form-control">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Time</label>
+                                <input type="time" class="form-control">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-info mt-3 text-white">Book Appointment</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MANAGE APPOINTMENTS -->
+    <section id="appManage">
+        <div class="container py-5">
+            <h2 class="fw-bold text-warning mb-4">🗂 Manage Appointments</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered align-middle shadow-sm">
+                    <thead class="table-warning">
+                        <tr>
+                            <th>#</th>
+                            <th>Patient</th>
+                            <th>Doctor</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Kavindu Silva</td>
+                            <td>Dr. Fernando</td>
+                            <td>2025-11-12</td>
+                            <td>10:00 AM</td>
+                            <td><span class="badge bg-success">Confirmed</span></td>
+                            <td>
+                                <button class="btn btn-sm btn-outline-danger">Cancel</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Sithmi Perera</td>
+                            <td>Dr. Perera</td>
+                            <td>2025-11-14</td>
+                            <td>2:30 PM</td>
+                            <td><span class="badge bg-warning text-dark">Pending</span></td>
+                            <td>
+                                <button class="btn btn-sm btn-outline-success">Approve</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEEDBACK -->
+    <section id="feedback">
+        <div class="container py-5">
+            <h2 class="fw-bold text-danger mb-4">💬 Service Feedback</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <form class="border rounded-3 p-4 shadow-sm bg-light">
+                        <div class="mb-3">
+                            <label class="form-label">Your Name</label>
+                            <input type="text" class="form-control" placeholder="Enter your name">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Your Feedback</label>
+                            <textarea class="form-control" rows="4" placeholder="Share your thoughts..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-danger">Submit Feedback</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- FOOTER -->

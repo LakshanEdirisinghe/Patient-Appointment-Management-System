@@ -22,16 +22,16 @@
     cursor: pointer;
 }
 
-.navbar-nav .nav-link.active {
+/* Highlight selected tab with underline */
+.nav-link:hover {
     color: #007bff !important;
-    border-bottom: 2px solid #007bff;
+    border-bottom: 3px solid #007bff;
+    padding-bottom: 5px;
+    font-weight: 600;
 }
 
-/* Page sections */
-/* .title{
-    margin-left: 10px;
-    margin-right: 12px;
-} */
+
+
 
 .qaCard:hover{
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -43,7 +43,7 @@
 
 section {
     display: none;
-    /* padding-top: 120px; */
+    padding-top: 120px;
     text-align: center;
     min-height: 100vh;
 }
