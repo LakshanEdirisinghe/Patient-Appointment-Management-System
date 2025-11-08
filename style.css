@@ -1,3 +1,7 @@
+*{
+    transition: all 0.3s ease;
+}
+
 /* Navbar */
 .navbar {
     background-color: #ffffff !important;
@@ -28,6 +32,15 @@
     margin-left: 10px;
     margin-right: 12px;
 } */
+
+.qaCard:hover{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-color: lightblue;
+}
+.qaCard:active{
+    background-color: #007bff;
+}
+
 section {
     display: none;
     /* padding-top: 120px; */

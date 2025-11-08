@@ -76,14 +76,14 @@
             <div class="row g-4 justify-content-center">
                 <!-- Card 1 -->
                 <div class="col-md-4 col-lg-3">
-                    <a href="#" class="text-decoration-none">
-                        <div class="card h-100 shadow-sm border-0">
+                    <a href="#" onclick="showSection('patReg')" class="text-decoration-none">
+                        <div class="card h-100 qaCard border-1">
                             <div class="card-body text-center">
                                 <i class="bi bi-person-plus display-5 text-primary mb-3"></i>
                                 <h5 class="card-title">Patient Registration</h5>
                                 <p class="card-text text-muted">Register new patients quickly and securely in the
                                     system.</p>
-                                <!-- <a href="#" class="btn btn-outline-primary btn-sm">Register</a> -->
+
                             </div>
                         </div>
                     </a>
@@ -91,61 +91,68 @@
 
                 <!-- Card 2 -->
                 <div class="col-md-4 col-lg-3">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body text-center">
-                            <i class="bi bi-person-badge display-5 text-success mb-3"></i>
-                            <h5 class="card-title">Doctor Registration</h5>
-                            <p class="card-text text-muted">Add new doctors and manage their professional details
-                                easily.</p>
-                            <a href="#" class="btn btn-outline-success btn-sm">Register</a>
+                    <a href="#" onclick="showSection('docReg')" class="text-decoration-none">
+                        <div class="card h-100 qaCard border-1">
+                            <div class="card-body qaCard text-center">
+                                <i class="bi bi-person-badge display-5 text-success mb-3"></i>
+                                <h5 class="card-title">Doctor Registration</h5>
+                                <p class="card-text text-muted">Add new doctors and manage their professional details
+                                    easily.</p>
+
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
 
                 <!-- Card 3 -->
                 <div class="col-md-4 col-lg-3">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body text-center">
-                            <i class="bi bi-calendar-check display-5 text-info mb-3"></i>
-                            <h5 class="card-title">Book Appointment</h5>
-                            <p class="card-text text-muted">Book an appointment with your preferred doctor in seconds.
-                            </p>
-                            <a href="#" class="btn btn-outline-info btn-sm">Book Now</a>
+                    <a href="#" onclick="showSection('bookApp')" class="text-decoration-none">
+                        <div class="card h-100  border-1">
+                            <div class="card-body qaCard text-center">
+                                <i class="bi bi-calendar-check display-5 text-info mb-3"></i>
+                                <h5 class="card-title">Book Appointment</h5>
+                                <p class="card-text text-muted">Book an appointment with your preferred doctor in
+                                    seconds.
+                                </p>
+
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
 
                 <!-- Card 4 -->
                 <div class="col-md-4 col-lg-3">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body text-center">
-                            <i class="bi bi-clipboard2-pulse display-5 text-warning mb-3"></i>
-                            <h5 class="card-title">Manage Appointments</h5>
-                            <p class="card-text text-muted">View, update, or cancel appointments in one place.</p>
-                            <a href="#" class="btn btn-outline-warning btn-sm">Manage</a>
+                    <a href="#" onclick="showSection('appManage')" class="text-decoration-none">
+                        <div class="card h-100 qaCard border-1">
+                            <div class="card-body text-center">
+                                <i class="bi bi-clipboard2-pulse display-5 text-warning mb-3"></i>
+                                <h5 class="card-title">Manage Appointments</h5>
+                                <p class="card-text text-muted">View, update, or cancel appointments in one place.</p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
 
                 <!-- Card 5 -->
                 <div class="col-md-4 col-lg-3">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body text-center">
-                            <i class="bi bi-chat-dots display-5 text-danger mb-3"></i>
-                            <h5 class="card-title">Service Feedback</h5>
-                            <p class="card-text text-muted">Share your feedback to help us improve our healthcare
-                                service.</p>
-                            <a href="#" class="btn btn-outline-danger btn-sm">Give Feedback</a>
+                    <a href="#" onclick="showSection('feedback')" class="text-decoration-none">
+                        <div class="card h-100 qaCard">
+                            <div class="card-body qaCard border-1 text-center">
+                                <i class="bi bi-chat-dots display-5 text-danger mb-3"></i>
+                                <h5 class="card-title">Service Feedback</h5>
+                                <p class="card-text text-muted">Share your feedback to help us improve our healthcare
+                                    service.</p>
+
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
-        </div>
     </section>
 
 
 
-    <!-- ABOUT -->
+    <!-- Patient Registration -->
     <section id="patReg">
         <h1>About</h1>
         <div class="container">
@@ -234,24 +241,29 @@
 
     <script>
         function showSection(sectionId) {
-            // hide all sections
+            // Hide all sections
             document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
-            // show clicked one
-            document.getElementById(sectionId).classList.add('active');
 
-            // update nav active
+            // Show selected section
+            const targetSection = document.getElementById(sectionId);
+            if (targetSection) targetSection.classList.add('active');
+
+            // Update active nav link
             document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
-            const activeLink = Array.from(document.querySelectorAll('.nav-link'))
-                .find(link => link.textContent.trim().toLowerCase() === sectionId);
+
+            const activeLink = Array.from(document.querySelectorAll('.nav-link')).find(link =>
+                link.textContent.trim().toLowerCase().replace(/\s+/g, '') === sectionId.toLowerCase().replace(/\s+/g, '')
+            );
             if (activeLink) activeLink.classList.add('active');
 
-            // collapse navbar on mobile
+            // Collapse navbar on mobile (optional)
             const navbarCollapse = document.querySelector('.navbar-collapse');
             if (navbarCollapse.classList.contains('show')) {
                 new bootstrap.Collapse(navbarCollapse).toggle();
             }
         }
     </script>
+
 </body>
 
 </html>
